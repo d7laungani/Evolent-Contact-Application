@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "sdkVersion": "25.0.0",
+    "orientation": "portrait",
+    "privacy": "unlisted",
+    "name": "Evolent app",
+    "slug": "evolent-app",
+    "platforms": ["ios", "android"],
+    "version": "0.0.1",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.evolent.app"
+    },
+    "android": {
+      "package": "com.evolent.app"
+    },
+    "loading": {
+    }
+  }
+
+}

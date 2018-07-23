@@ -1,0 +1,57 @@
+{
+  "name": "react-native-starter-kit",
+  "version": "0.1.0",
+  "description": "React Native starter kit, get up and running !",
+  "author": "Jean-Claude Pratt-Delzenne <prattjames4@gmail.com> http://http://prattdelzenne.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@kadira/react-native-storybook": "^2.0.0",
+    "babel-jest": "20.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-native": "1.9.1",
+    "concurrently": "^3.4.0",
+    "flow-bin": "^0.45.0",
+    "jest": "20.0.0",
+    "jest-expo": "^0.4.0",
+    "react-native-scripts": "^1.14.0",
+    "react-test-renderer": "16.0.0-alpha.6"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts start\"",
+    "android": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts android\"",
+    "ios": "concurrently --kill-others \"storybook start -p 7007\" \"react-native-scripts ios\"",
+    "eject": "react-native-scripts eject",
+    "test": "node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-expo": "^4.0.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "buffer": "^5.1.0",
+    "expo": "^25.0.0",
+    "react": "16.2.0",
+    "react-dom": "16.0.0-alpha.12",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
+    "react-native-elements": "^0.19.1",
+    "react-native-keyboard-aware-scroll-view": "^0.6.0",
+    "react-native-router-flux": "4.0.0-beta.27",
+    "react-native-uuid": "^1.4.9",
+    "react-redux": "^5.0.4",
+    "react-router-native": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-persist": "^4.8.3",
+    "redux-saga": "^0.15.0",
+    "reselect": "^3.0.0",
+    "styled-components": "^1.4.6"
+  },
+  "standard": {
+    "globals": [
+      "fetch",
+      "FormData"
+    ]
+  }
+}
