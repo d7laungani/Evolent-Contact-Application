@@ -12,7 +12,11 @@ class ContactsPage extends Component {
     constructor(props){
         super(props);
 
-        let items = this.props.contacts
+        let items = this.props.contacts.filter(element => {
+            if( element.active) {
+                return element
+            }
+        })
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         ds = ds.cloneWithRows(items)
 
@@ -31,11 +35,16 @@ class ContactsPage extends Component {
 
 
     componentWillReceiveProps(newProps) {
+        let items = newProps.contacts.filter(element => {
+            if( element.active) {
+                return element
+            }
+        })
 
         var ds = this.state.dataSource
 
-        ds = ds.cloneWithRows(newProps.contacts)
-        this.setState({ items: newProps.contacts, dataSource: ds})
+        ds = ds.cloneWithRows(items)
+        this.setState({ items: items, dataSource: ds})
 
 
     }
@@ -110,10 +119,12 @@ class ContactsPage extends Component {
         let currentContacts = this.props.contacts
         if ( type == 'delete') {
             let currentId = data.id
-            let changedContacts = currentContacts.filter(element => {
-                if (element.id != currentId) {
+            let changedContacts = currentContacts.map(element => {
+                if (element.id == currentId) {
+                    element.active = false
                     return element
                 }
+                return element
             })
             updateContacts(changedContacts)
             Actions.popTo('main')
