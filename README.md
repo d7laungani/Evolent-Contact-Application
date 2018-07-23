@@ -13,6 +13,21 @@ exp start
 Get Expo Client and enter url
 ```
 
+## Running Application (if you want to skip installation ) 
+
+```
+Get Expo Client App on your phone
+
+Login with Demo Credentials:
+Email: d7laungani+expo@gmail.com
+Password: <check recruiter email>
+
+Go to Projects tab
+Click Expo App
+```
+
+Note: This was tested on an iphone. Also state persists so any changes made stays 
+
 ## Features
 
 - [x] Ability to delete contact
